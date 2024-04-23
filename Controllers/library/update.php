@@ -40,4 +40,4 @@ $book = $db->execute($query, $params)->fetch();
 
 }
 
-require "views/update_view.php";
+require "views/library_view/update_view.php";

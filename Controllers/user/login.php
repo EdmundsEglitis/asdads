@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["email"] = $_POST["email"];
         if($user["Admin"] == true){
             $_SESSION["Admin"] = true;
+        }else{
+            $_SESSION["Admin"] = false;
         }
 
         $_SESSION["flash"] = "tu esi lohs";
@@ -36,4 +38,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
     
         
-        require "views/login_view.php";
+        require "views/user_view/login_view.php";

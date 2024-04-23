@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+<?php require "components/nav.php" ?>
 <h1>register </h1>
 
 

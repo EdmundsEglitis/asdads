@@ -1,5 +1,6 @@
-
-<?php if (isset($_SESSION["Admin"])) { ?>
+<link rel="stylesheet" href="style.css">
+<?php require "components/nav.php" ?>
+<?php if ($_SESSION["Admin"]==true) { ?>
 
 <h1>update a post </h1>
 

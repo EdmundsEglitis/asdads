@@ -39,4 +39,4 @@ $db = new Database($config);
         
     
         }}
-        require "views/register_view.php";
+        require "views/user_view/register_view.php";

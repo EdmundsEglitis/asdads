@@ -10,4 +10,4 @@ $params = [":id" => $_GET["id"] ];
 
 $book = $db->execute($query, $params)->fetch();
 
-require "views/show_view.php";
+require "views/library_view/show_view.php";

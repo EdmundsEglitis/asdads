@@ -11,12 +11,9 @@ $db = new Database($config);
 $books = $db->execute($query, $params)->fetchALL();
 
 
-if (isset($_SESSION["Admin"])) { 
-    echo "sveiks admin";
-} 
 
 
-require "views/index_view.php";
+require "views/library_view/index_view.php";
 
 
 //  var_dump($events);
