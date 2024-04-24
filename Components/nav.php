@@ -3,9 +3,11 @@
     <input class="check" type="checkbox">
     <ul class="nav-items">
 
-            <?php if($_SESSION["Admin"]==true) { ?>
+            <?php if(isset($_SESSION["Admin"])==true) { ?>
                 <li class="nav-li"><a href="/create">create</a></li>
             <?php } ?>
+
+
     <li class="nav-li"> <a class=main-page href="/">Back to main page</a></a> </li>
     <?php if(!isset($_SESSION["flash"])) { ?>
     <li class="nav-li"> <a class=loginregister href="/register">register</a></li>

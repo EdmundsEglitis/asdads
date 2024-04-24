@@ -19,7 +19,7 @@
             <p> login to borrow book </p>
             <?php } ?>
 
-<?php if($_SESSION["Admin"]==true) { ?>
+<?php if(isset($_SESSION["Admin"])) { ?>
  <a href="/update?id=<?= $book["id"] ?>">Edit</a>
 <?php } ?>
 

@@ -22,12 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
+        $_SESSION["id"] = $user["id"];
         $_SESSION["user"] = true;
         $_SESSION["email"] = $_POST["email"];
         if($user["Admin"] == true){
             $_SESSION["Admin"] = true;
-        }else{
-            $_SESSION["Admin"] = false;
         }
 
         $_SESSION["flash"] = "tu esi lohs";

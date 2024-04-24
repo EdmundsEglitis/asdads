@@ -8,7 +8,7 @@ $config = require "config.php";
 
 
     $query = "SELECT * FROM users WHERE id = :id"; 
-    $params = [":id" => $_SESSION["user"]];
+    $params = [":id" => $_SESSION["id"]];
     $db = new DataBase($config);
     $user = $db->execute($query, $params)->fetch();
 

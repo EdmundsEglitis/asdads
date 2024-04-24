@@ -22,7 +22,7 @@
                  </form>
             <?php } ?>
 
-<?php if($_SESSION["Admin"] == true) { ?>
+<?php if(isset($_SESSION["Admin"])) { ?>
 
 <section class="admin-section">
 
@@ -91,9 +91,33 @@
     <section class="user-section">
     
     <h2>Welcome <?php echo $_SESSION["email"] ?> </h2>
+    <p>here are your borrowed book</p>
 
+    <table>
+<thead>
+    <tr>
+        <th>Book name</th>
+        <th>Return date</th>
+        <th>Book_id</th>
+        <th>User_id</th>
 
+    </tr>
+</thead>
+<tbody>
+    
+    <?php foreach ($borrowedBooks as $borrowedBook): ?>
+    <?php if($_SESSION["id"] == $borrowedBook["user_id"]){ ?>
+        <tr>
+            <td><img class="bookIMG" src="IMGS/bookIMG.svg" alt="1"> <a href="/show?id= <?=$borrowedBook["book_id"]?>">  <?= $borrowedBook["name"] ?> </a> </td>
+            <td><?php echo $borrowedBook["return_date"]; ?></td>
+            <td><?php echo $borrowedBook["book_id"]; ?></td>
+            <td><?php echo $borrowedBook["user_id"]; ?></td>
+        </tr>
+    <?php } ?>
+    <?php endforeach; ?>
 
+</tbody>
+</table>
 </section>
 <?php } ?>
 </body>
