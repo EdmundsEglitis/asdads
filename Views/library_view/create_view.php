@@ -10,19 +10,24 @@
 <body>
 <?php require "components/nav.php" ?>
     <h1>ADD BOOKS</h1>
+    <div class="parent-div">
     <form method="POST">
         <label>
-            NAME
+            <div class="child-div">
+            <p class="create-p">NAME</p>
             <input name="name">
-            AUTHOR
+            <p class="create-p">AUTHOR</p>
             <input name="author">
-            RELEASE DATE
+            <p class="create-p">RELEASE DATE</p>
             <input name="release_date">
-            STOCK
+            <p class="create-p">STOCK</p>
             <input name="availability">
         </label>
         
-        <button>Submit</button>
+        <br>
+        <button class="create">Create</button>
     </form>
+    </div>
+    </div>
 </body>
 </html>

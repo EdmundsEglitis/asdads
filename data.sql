@@ -28,9 +28,9 @@ CREATE TABLE borrowedBooks (
 );
 
 
-CREATE TABLE user (
+CREATE TABLE users (ss
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	email VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
-	admin BOOLEAN
+	Admin BOOLEAN
 );
