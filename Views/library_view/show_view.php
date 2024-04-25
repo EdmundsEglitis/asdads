@@ -14,7 +14,7 @@
     <h3>available:<?= htmlspecialchars($book["availability"]) ?></h3>
 
     <?php if(isset($_SESSION["user"])){ ?>
-            <a href="/borrow?id=<?= $book["id"] ?>">Borrow book</a>
+            <a class="a-show" href="/borrow?id=<?= $book["id"] ?>">Borrow book</a>
         <?php } else { ?>
             <p> login to borrow book </p>
             <?php } ?>

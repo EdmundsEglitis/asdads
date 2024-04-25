@@ -3,8 +3,8 @@
 require "Database.php";
 $config = require "config.php";
 
-    $query = "SELECT * FROM user WHERE id = :id"; 
-    $params = [":id" => $_SESSION["user"]];
+    $query = "SELECT * FROM users WHERE id = :id"; 
+    $params = [":id" => $_SESSION["id"]];
     $db = new DataBase($config);
     $user = $db->execute($query, $params)->fetch();
 
@@ -22,4 +22,4 @@ $config = require "config.php";
     $params = [":id" => $_GET["id"]];
     $db->execute($query, $params);
 
-header("Location: /borrowedBooks?id=" . $_SESSION["user"]);
+    header("Location: /profile");

@@ -8,6 +8,7 @@ return[
     "/login" => "Controllers/user/login.php",
     "/logout" => "Controllers/user/logout.php",
     "/borrow" => "controllers/library/borrow.php",
-    "/profile" => "controllers/user/profile.php"
+    "/profile" => "controllers/user/profile.php",
+    "/return" => "controllers/library/return.php"
   ];
   
