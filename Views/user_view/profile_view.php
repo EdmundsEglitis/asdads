@@ -37,7 +37,7 @@
         <th>Return date</th>
         <th>Book_id</th>
         <th>User_id</th>
-        <th>Return books</th>
+        <th>Force user to return books</th>
 
     </tr>
 </thead>
@@ -49,7 +49,7 @@
             <td><?php echo $borrowedBook["return_date"]; ?></td>
             <td><?php echo $borrowedBook["book_id"]; ?></td>
             <td><?php echo $borrowedBook["user_id"]; ?></td>
-            <td><?= "'" . $book["name"] . "' return date of this book is: " . $book["return_date"] ?> <a href="/return?id=<?= $book["book_id"] ?>" class="blue_but">Return!</a></td>
+            <td><?= "'" . $borrowedBook["name"] . "' return date of this book is: " . $borrowedBook["return_date"] ?> <a href="/return?id=<?= $borrowedBook["book_id"] ?>" class="blue_but">Return!</a></td>
         </tr>
     <?php endforeach; ?>
 

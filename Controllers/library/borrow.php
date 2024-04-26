@@ -28,7 +28,7 @@ $config = require "config.php";
 
 
 
-
+        if($book["availability"] > 0){
         $query = "INSERT INTO 
         borrowedBooks (name, return_date, book_id, user_id) 
         VALUE 
@@ -44,5 +44,5 @@ $config = require "config.php";
         $params = [":id" => $_GET["id"]];
         $db->execute($query, $params);
         header("Location: /");
-
+        }
     $page_title = "borrowing";
